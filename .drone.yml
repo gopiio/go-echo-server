@@ -2,5 +2,5 @@ pipline:
   build:
     image: golang
     commands:
-      - echo "Start Build process"
+      - echo "Start Build process v1"
       - go build -o server
