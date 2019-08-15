@@ -1,9 +1,6 @@
-kind: pipeline
-name: default
-
-steps:
-- name: test
-  image: golang
-  commands:
-  - echo "Test Drone"
-  - go build -o server
+pipline:
+  build:
+    image: golang
+    commands:
+      - echo "Start Build process"
+      - go build -o server
