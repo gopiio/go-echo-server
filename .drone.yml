@@ -12,4 +12,5 @@ pipeline:
   docker:
     image: plugins/docker
     repo: quay.io/ottintl/kube-echo-server
+    secrets: [ docker_username, docker_password ]
     tag: latest
