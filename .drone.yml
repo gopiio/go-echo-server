@@ -1,6 +1,16 @@
-pipline:
+workspace:
+  base: /go
+  path: src/github.com/Depado/dummy
+
+pipeline:
+  prerequisites:
+    image: "golang:latest"
+    commands: 
+      - go version
+      - go get -u github.com/golang/dep/cmd/dep
+      - dep ensure -vendor-only
+  
   build:
-    image: golang
+    image: "golang:latest"
     commands:
-      - echo "Start Build process v1"
-      - go build -o server
+      - go build
