@@ -14,4 +14,4 @@ pipeline:
     repo: quay.io/ottintl/kube-echo-server
     #username: $$DOCKER_USERNAME
     #password: $$DOCKER_PASSWORD
-    tag: latest
+    tag: 1.2.0
