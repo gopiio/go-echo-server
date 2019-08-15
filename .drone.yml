@@ -8,11 +8,10 @@ pipeline:
     commands:
       - go version
       - go build -o server
-publish:
+  
   docker:
     registry: quay.io
     username: docker_username
     password: docker_password
     repo: ottintl/kube-echo-server
     tag: latest
-    file: Dockerfile
