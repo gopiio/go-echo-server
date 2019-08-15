@@ -10,6 +10,7 @@ pipeline:
       - go build -o server
   
   docker:
+    image: "plugins/docker"
     registry: quay.io
     username: docker_username
     password: docker_password
