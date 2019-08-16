@@ -21,3 +21,4 @@ steps:
       password: 
         from_secret: password
       registry: quay.io
+

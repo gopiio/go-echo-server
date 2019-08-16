@@ -31,6 +31,7 @@ func main() {
 				requests = append(requests, fmt.Sprintf("%v:%v", name, val))
 			}
 		}
+		requests = append(requests, fmt.Sprintf("Tag:%v", "test"))
 		sort.Strings(requests)
 		fmt.Fprintf(w, strings.Join(requests, "\n"))
 	})
