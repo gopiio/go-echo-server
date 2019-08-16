@@ -6,3 +6,8 @@ steps:
     image: golang
     commands:
       - echo "Test Go Web App"
+  
+  - name: build
+    image: golang
+    commands:
+      - go build -o server
