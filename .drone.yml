@@ -12,6 +12,6 @@ pipeline:
   build:
     image: plugins/docker
     repo: quay.io/ottintl/kube-echo-server
-    #username: $$DOCKER_USERNAME
-    #password: $$DOCKER_PASSWORD
+    username: docker_username
+    password: docker_password
     tag: 1.2.0
