@@ -1,17 +1,8 @@
-workspace:
-  base: /go
-  path: src
+kind: pipeline
+name: go-echo-server
 
-pipeline:  
-  test:
-    image: "golang:latest"
+steps:
+  - name: test
+    image: golang
     commands:
-      - go version
-      - go build -o server
-  
-  build:
-    image: plugins/docker
-    repo: quay.io/ottintl/kube-echo-server
-    username: docker_username
-    password: docker_password
-    tag: 1.2.0
+      - echo "Test Go Web App"
