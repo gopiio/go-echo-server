@@ -11,3 +11,13 @@ steps:
     image: golang
     commands:
       - go build -o server
+  
+  - name: package
+    image: plugins/docker
+    settings:
+      repo: quay.io/ottintl/kube-echo-server
+      username:
+        from_secret: username
+      password: 
+        from_secret: password
+      registry: quay.io
