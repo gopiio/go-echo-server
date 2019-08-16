@@ -32,6 +32,7 @@ func main() {
 			}
 		}
 		requests = append(requests, fmt.Sprintf("Tag:%v", "test"))
+		requests = append(requests, "Whitelist:True")
 		sort.Strings(requests)
 		fmt.Fprintf(w, strings.Join(requests, "\n"))
 	})
