@@ -21,6 +21,17 @@ steps:
       password: 
         from_secret: quay_password
       registry: quay.io
+  
+  - name: deploy
+    image: peloton/drone-rancher
+    url: https://rancher.tides.test-ti-platform.com/v3
+    access_key:
+      from_secret: rancher_username
+    secret_key:
+      from_secret: rancher_password
+    service: "kube-echo-1"
+    docker_image: quay.io/ottintl/kube-echo-server
+
 ---
 kind: secret
 name: quay_username
@@ -32,6 +43,18 @@ kind: secret
 name: quay_password
 get:
   path: dev/cicd/quay
+  name: password
+---
+kind: secret
+name: rancher_username
+get:
+  path: dev/rancher
+  name: username
+---
+kind: secret
+name: rancher_password
+get:
+  path: dev/rancher
   name: password
 
 
