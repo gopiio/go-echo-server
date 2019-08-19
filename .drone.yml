@@ -22,14 +22,12 @@ steps:
         from_secret: password
       registry: quay.io
 
---
 kind: secret
 name: username
 get:
   path: dev/cicd/quay
   name: username
 
---
 kind: secret
 name: password
 get:
