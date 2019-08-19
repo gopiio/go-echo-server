@@ -17,19 +17,19 @@ steps:
     settings:
       repo: quay.io/ottintl/kube-echo-server
       username:
-        from_secret: username
+        from_secret: quay_username
       password: 
-        from_secret: password
+        from_secret: quay_password
       registry: quay.io
 ---
 kind: secret
-name: username
+name: quay_username
 get:
   path: dev/cicd/quay
   name: username
 ---
 kind: secret
-name: password
+name: quay_password
 get:
   path: dev/cicd/quay
   name: password
